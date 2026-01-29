@@ -1,0 +1,21 @@
+local_backend: false
+backend:
+  name: github
+  repo: diopoop-cmyk/ghservicecleaning-site
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - file: "content/home.yml"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
+          - { label: "Email", name: "email", widget: "string", required: false }
