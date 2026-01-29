@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Book your cleaning online and pick an available time." />
+  <link rel="icon" href="/assets/logo.svg" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <title>Book Now | G&H Service</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Home">
+        <img src="/assets/logo.svg" alt="G&H Service logo" />
+        <div>
+          <strong id="brandName">G&H Service</strong>
+          <div class="small" id="tagline">Premium, friendly cleaning for homes & rentals</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/services/">Services</a>
+        <a href="/#quote">Instant Quote</a>
+        <a href="/book/">Book Now</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="btn" id="waLink" href="#" rel="nofollow">WhatsApp</a>
+        <a class="btn primary" href="/#quote">Get an instant quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="crumbs small" data-anim>
+          <a href="/">Home</a> <span>›</span> <span>Book Now</span>
+        </div>
+        <h1 data-anim>Book online</h1>
+        <p class="lead" data-anim>Pick a time that works for you. If you don’t see a good slot, message us and we’ll try to fit you in.</p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:14px 0" data-anim>
+          <a class="btn primary" href="/#quote">Get a quote first</a>
+          <a class="btn" id="calendlyLink" href="#" rel="nofollow">Open booking link</a>
+        </div>
+
+        <div id="calendlyWrap" data-anim></div>
+
+        <div class="card" style="margin-top:16px" data-anim>
+          <h3 style="margin:0 0 8px">Prefer text?</h3>
+          <p class="small" style="margin:0 0 10px">Send your address, service type, bedrooms/bathrooms, and preferred day/time — we’ll confirm quickly.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn primary" id="phoneLink" href="tel:3475399538">Call / Text</a>
+            <a class="btn" id="waLink2" href="#" rel="nofollow">WhatsApp</a>
+            <a class="btn ghost" id="emailLink" href="mailto:ghservicecleaning1@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="gap:10px">
+          <img src="/assets/logo.svg" alt="" style="width:32px;height:32px" />
+          <div>
+            <strong id="brandName2">G&H Service</strong>
+            <div class="small">Premium cleaning • Friendly service</div>
+          </div>
+        </div>
+        <p class="small" style="margin-top:10px">© <span id="year"></span> G&H Service. All rights reserved.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <div class="small" style="display:grid;gap:8px">
+          <a href="/services/">Services</a>
+          <a href="/#quote">Instant Quote</a>
+          <a href="/book/">Book Now</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="small" style="display:grid;gap:8px">
+          <a href="tel:3475399538">+1 (347) 539-9538</a>
+          <a href="mailto:ghservicecleaning1@gmail.com">ghservicecleaning1@gmail.com</a>
+          <a href="https://wa.me/13475399538" rel="nofollow">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+  <script src="/assets/book.js"></script>
+</body>
+</html>

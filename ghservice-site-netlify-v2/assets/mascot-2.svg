@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-label="Sparkling pro mascot">
+  <defs>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f5f7ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9bd5"/>
+      <stop offset="1" stop-color="#7df2c7"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0b0b0c" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="420" height="420" rx="40" fill="#ffffff"/>
+  <g filter="url(#soft)" transform="translate(40 35)">
+    <!-- blob background -->
+    <path d="M85 40c44-44 148-44 192 0 42 42 58 106 26 162-33 56-62 116-118 118-56 2-126-28-154-84-29-56 10-154 54-196z"
+          fill="url(#accent)" opacity="0.18"/>
+    <!-- body -->
+    <circle cx="170" cy="120" r="56" fill="#f3c7a6"/>
+    <path d="M110 330c0-78 36-128 60-146 18-14 42-14 60 0 24 18 60 68 60 146"
+          fill="url(#shirt)"/>
+    <path d="M110 330c0-78 36-128 60-146 18-14 42-14 60 0 24 18 60 68 60 146"
+          fill="none" stroke="#e9e9f2" stroke-width="4"/>
+    <!-- hair -->
+    <path d="M122 118c10-50 64-78 110-52 28 16 40 40 40 74-6-14-18-22-34-20-20 2-32-10-50-20-20-12-42-10-66 18z"
+          fill="#2a2430"/>
+    <!-- face -->
+    <circle cx="150" cy="132" r="6" fill="#1e1e1f"/>
+    <circle cx="210" cy="132" r="6" fill="#1e1e1f"/>
+    <path d="M160 160c14 12 36 12 50 0" fill="none" stroke="#1e1e1f" stroke-width="6" stroke-linecap="round"/>
+    <path d="M168 138c8 6 16 6 24 0" fill="none" stroke="#1e1e1f" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+    <!-- sleeves -->
+    <path d="M98 256c-10 28-10 58 0 86 6 18 28 26 44 16l30-18" fill="url(#shirt)" stroke="#e9e9f2" stroke-width="4"/>
+    <path d="M302 256c10 28 10 58 0 86-6 18-28 26-44 16l-30-18" fill="url(#shirt)" stroke="#e9e9f2" stroke-width="4"/>
+    <!-- logo patch -->
+    <g transform="translate(166 228)">
+      <rect x="-38" y="-22" width="76" height="44" rx="12" fill="#0b0b0c"/>
+      <text x="0" y="10" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="18" font-weight="800" fill="#d7b85b">G&H</text>
+    </g>
+    <!-- tool -->
+    <g transform="translate(255 300) rotate(14)">
+      <rect x="-10" y="-65" width="20" height="85" rx="10" fill="#0b0b0c" opacity="0.16"/>
+      <rect x="-8" y="-62" width="16" height="70" rx="8" fill="#ffffff" stroke="#e9e9f2" stroke-width="3"/>
+      <rect x="-18" y="8" width="36" height="20" rx="10" fill="#ff9bd5" opacity="0.9"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Site (brand, hours, areas)"
+        file: "content/site.json"
+        fields:
+          - {label: "Brand", name: "brand", widget: "object", fields: [
+              {label: "Name", name: "name", widget: "string"},
+              {label: "Tagline", name: "tagline", widget: "string"},
+              {label: "Phone (pretty)", name: "phone", widget: "string"},
+              {label: "Phone (digits only)", name: "phone_raw", widget: "string"},
+              {label: "WhatsApp (digits only)", name: "whatsapp", widget: "string"},
+              {label: "Email", name: "email", widget: "string"},
+              {label: "Primary color", name: "primary_color", widget: "string"},
+              {label: "Accent color", name: "accent_color", widget: "string"}
+            ]}
+          - {label: "Hero", name: "hero", widget: "object", fields: [
+              {label: "Headline", name: "headline", widget: "string"},
+              {label: "Subheadline", name: "subheadline", widget: "text"},
+              {label: "Primary CTA", name: "cta_primary", widget: "string"},
+              {label: "Secondary CTA", name: "cta_secondary", widget: "string"}
+            ]}
+          - label: "Working hours"
+            name: "hours"
+            widget: "list"
+            fields:
+              - {label: "Day", name: "day", widget: "string"}
+              - {label: "Open", name: "open", widget: "string"}
+              - {label: "Close", name: "close", widget: "string"}
+          - label: "Areas served"
+            name: "areas"
+            widget: "list"
+            field: {label: "Area", name: "area", widget: "string"}
+          - {label: "Guarantee", name: "guarantee", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Text", name: "text", widget: "text"}
+            ]}
+          - {label: "Booking", name: "booking", widget: "object", fields: [
+              {label: "Calendly URL", name: "calendly_url", widget: "string", hint: "Paste your Calendly scheduling link"}
+            ]}
+
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Summary", name: "summary", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

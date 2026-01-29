@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Cleaning service details and easy booking." />
+  <link rel="icon" href="/assets/logo.svg" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <title>Service | G&H Service</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Home">
+        <img src="/assets/logo.svg" alt="G&H Service logo" />
+        <div>
+          <strong id="brandName">G&H Service</strong>
+          <div class="small" id="tagline">Premium, friendly cleaning for homes & rentals</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/services/" aria-current="page">Services</a>
+        <a href="/#quote">Instant Quote</a>
+        <a href="/book/">Book Now</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="btn" id="waLink" href="#" rel="nofollow">WhatsApp</a>
+        <a class="btn primary" id="bookNow" href="/book/">Book now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="crumbs small" data-anim>
+          <a href="/">Home</a> <span aria-hidden="true">›</span>
+          <a href="/services/">Services</a> <span aria-hidden="true">›</span>
+          <span id="serviceCrumb">Service</span>
+        </div>
+
+        <div class="grid-2" style="align-items:start">
+          <div class="card" data-anim>
+            <h1 id="serviceTitle" style="margin:0 0 8px">Service</h1>
+            <div id="serviceBody" class="prose"></div>
+
+            <div class="badges" style="margin-top:16px;flex-wrap:wrap">
+              <a class="btn primary" href="/book/">Book now</a>
+              <a class="btn" href="/#quote">Get an instant quote</a>
+              <a class="btn ghost" href="/services/">Back to all services</a>
+            </div>
+          </div>
+
+          <aside class="card" data-anim>
+            <h3 style="margin:0 0 8px">Quick contact</h3>
+            <div class="small" style="display:grid;gap:10px">
+              <a id="phoneLink" href="tel:3475399538">+1 (347) 539-9538</a>
+              <a id="emailLink" href="mailto:ghservicecleaning1@gmail.com">ghservicecleaning1@gmail.com</a>
+              <a class="btn" href="/book/">See available times</a>
+            </div>
+            <div class="hr"></div>
+            <h3 style="margin:0 0 8px">What you get</h3>
+            <ul class="check">
+              <li>Clear checklist-based cleaning</li>
+              <li>Supplies included</li>
+              <li>Friendly, careful work</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="gap:10px">
+          <img src="/assets/logo.svg" alt="G&H Service logo" />
+          <div>
+            <strong id="brandName">G&H Service</strong>
+            <div class="small">© <span id="year"></span></div>
+          </div>
+        </div>
+        <p class="small" style="margin-top:10px">Edit this website at <a href="/admin/">/admin</a>.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <div class="small" style="display:grid;gap:8px">
+          <a href="/services/">Services</a>
+          <a href="/">Instant Quote</a>
+          <a href="/book/">Book Now</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="small" style="display:grid;gap:8px">
+          <a id="phoneLink" href="tel:3475399538">+1 (347) 539-9538</a>
+          <a id="emailLink" href="mailto:ghservicecleaning1@gmail.com">ghservicecleaning1@gmail.com</a>
+          <a id="waLink2" href="#" rel="nofollow">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+  <script type="module" src="/assets/service-page.js"></script>
+</body>
+</html>
