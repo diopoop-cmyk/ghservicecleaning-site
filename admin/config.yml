@@ -1,3 +1,4 @@
+local_backend: false
 backend:
   name: github
   repo: diopoop-cmyk/ghservicecleaning-site
