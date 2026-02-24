@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G&H Service — Premium Cleaning</title>
+  <meta name="description" content="Premium home cleaning in Phoenix & surrounding areas. Get a fast quote from G&H Service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="/">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <div>
+          <div class="brand__name">G&amp;H SERVICE</div>
+          <span class="brand__tag">PREMIUM SERVICE</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href='/services/deep-cleaning.html'>Deep Cleaning</a>
+        <a href='/services/move-out.html'>Move-out</a>
+        <a href='/services/airbnb.html'>Airbnb</a>
+        <a href='/#quote'>Get a Quote</a>
+      </nav>
+      <div class="topbar__cta">
+        <a class="btn" href="tel:+13475399538">Call (347) 539-9538</a>
+        <a class="btn btn--gold" href="/#quote">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="card hero__card">
+          <span class="kicker">Premium • Reliable • Detailed</span>
+          <h1>Cleaning that looks and feels premium.</h1>
+          <p class="lead">Residential • Move-out • Airbnb turnovers. Serving Phoenix, Glendale & surrounding areas.</p>
+          <div class="topbar__cta" style="margin-top:14px">
+            <a class="btn btn--gold" href="#quote">Get a Quote</a>
+            <a class="btn" href="tel:+13475399538">Call now</a>
+          </div>
+          <div class="badges">
+            <div class="badge">Same-week availability (when open)</div>
+            <div class="badge">Bring supplies & equipment</div>
+            <div class="badge">Text or WhatsApp</div>
+          </div>
+        </div>
+        <div class="card hero__card">
+          <h3 style="margin:0 0 8px">Popular services</h3>
+          <div class="notice">
+            Choose a service page for details and what’s included:
+          </div>
+          <div class="section">
+            <div class="grid3" style="grid-template-columns:1fr; gap:12px">
+              <div class="card tile" style="background:rgba(11,11,13,.35)">
+                <h3>Deep Cleaning</h3>
+                <p>Detailed reset for kitchens, bathrooms, baseboards, high-touch areas.</p>
+                <p style="margin-top:10px"><a class="inline" href="/services/deep-cleaning.html">View details →</a></p>
+              </div>
+              <div class="card tile" style="background:rgba(11,11,13,.35)">
+                <h3>Move-out / Move-in</h3>
+                <p>Perfect for empty homes and turnovers — inside cabinets, fridge, oven (by request).</p>
+                <p style="margin-top:10px"><a class="inline" href="/services/move-out.html">View details →</a></p>
+              </div>
+              <div class="card tile" style="background:rgba(11,11,13,.35)">
+                <h3>Airbnb Turnover</h3>
+                <p>Fast, consistent resets for guests — linens checklist, photos on request.</p>
+                <p style="margin-top:10px"><a class="inline" href="/services/airbnb.html">View details →</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid3">
+          <div class="card tile">
+            <h3>Clear communication</h3>
+            <p>Text or WhatsApp. We confirm scope, timing, and expectations before we start.</p>
+          </div>
+          <div class="card tile">
+            <h3>Premium details</h3>
+            <p>We focus on the things people notice: kitchens, bathrooms, edges, and high-touch areas.</p>
+          </div>
+          <div class="card tile">
+            <h3>Fast quotes</h3>
+            <p>Send size, bedrooms/bathrooms, pets, and condition — we’ll reply quickly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quote">
+      <div class="container">
+        <div class="card form">
+          <h2 style="margin:0 0 6px">Get a Quote</h2>
+          <p class="muted" style="margin:0 0 14px">Fill out the form and we’ll reply by text or email.</p>
+
+          <form name="quote" method="POST" data-netlify="true" action="/thank-you.html" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="quote" />
+            <p style="display:none">
+              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Name *</label>
+                <input id="name" name="name" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="phone">Phone *</label>
+                <input id="phone" name="phone" required inputmode="tel" placeholder="(###) ###-####" />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="service">Service type *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select…</option>
+                  <option>Deep Cleaning</option>
+                  <option>Move-out / Move-in</option>
+                  <option>Airbnb Turnover</option>
+                  <option>Standard Cleaning</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="sqft">Home size (sq ft) *</label>
+                <input id="sqft" name="sqft" required inputmode="numeric" placeholder="e.g. 1800" />
+              </div>
+              <div class="field">
+                <label for="rooms">Bedrooms / Bathrooms *</label>
+                <input id="rooms" name="rooms" required placeholder="e.g. 3 bed / 2 bath" />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="pets">Pets?</label>
+                <select id="pets" name="pets">
+                  <option value="">Select…</option>
+                  <option>No</option>
+                  <option>Yes (dog)</option>
+                  <option>Yes (cat)</option>
+                  <option>Yes (multiple)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="cleanliness">Cleanliness level (1–10) *</label>
+                <input id="cleanliness" name="cleanliness" required inputmode="numeric" placeholder="1 = light, 10 = heavy" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="address">Address (or city/area) *</label>
+              <input id="address" name="address" required placeholder="Phoenix / Glendale / etc." />
+              <small class="help">We only use this to estimate travel and confirm the job area.</small>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="date">Preferred date *</label>
+                <input id="date" name="date" required placeholder="e.g. Thu morning" />
+              </div>
+              <div class="field">
+                <label for="time">Preferred time *</label>
+                <input id="time" name="time" required placeholder="e.g. 8:00 AM" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="notes">Notes / special requests</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Anything we should know?"></textarea>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+              <button class="btn btn--gold" type="submit">Send request</button>
+              <a class="btn" href="mailto:ghservicecleaning1@gmail.com">Email instead</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="brand" aria-label="Footer brand">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <div>
+          <div class="brand__name">G&amp;H SERVICE</div>
+          <div class="muted">Premium Cleaning • Phoenix, AZ</div>
+        </div>
+      </div>
+      <div class="footer__links">
+        <a href="/#quote">Quote</a>
+        <a href="tel:+13475399538">Call</a>
+        <a href="mailto:ghservicecleaning1@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class="wa-float" id="waFloat" href="#" aria-label="Chat on WhatsApp">
+    <span aria-hidden="true"></span> WhatsApp
+  </a>
+
+  <script src="/assets/script.js"></script>
+</body>
+</html>
