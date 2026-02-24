@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G&H Service — Premium Cleaning</title>
+  <meta name="description" content="Premium home cleaning in Phoenix & surrounding areas. Get a fast quote from G&H Service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="/">
+        <span class="brand__mark" aria-hidden="true">✦</span>
+        <span class="brand__name">G&H SERVICE</span>
+        <span class="brand__tag">PREMIUM SERVICE</span>
+      </a>
+      <div class="topbar__cta">
+        <a class="btn btn--ghost" href="tel:+13475399538">Call: (347) 539‑9538</a>
+        <a class="btn" href="#quote">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="kicker">Phoenix • Glendale • Scottsdale • Peoria • Mesa</p>
+          <h1>Premium home cleaning with a detailed, professional finish.</h1>
+          <p class="sub">
+            Tell us about your home and what type of cleaning you need — we’ll confirm details and send your quote fast.
+          </p>
+          <div class="hero__buttons">
+            <a class="btn" href="#quote">Request a Quote</a>
+            <a class="btn btn--ghost" href="sms:+13475399538">Text us</a>
+          </div>
+          <div class="trust">
+            <div class="trust__item"><span class="dot"></span>Licensed & insured*</div>
+            <div class="trust__item"><span class="dot"></span>Eco‑friendly options</div>
+            <div class="trust__item"><span class="dot"></span>Reliable scheduling</div>
+          </div>
+          <p class="fine">*Adjust this line if you’re not insured yet.</p>
+        </div>
+
+        <div class="hero__card" id="quote">
+          <h2>Quote request</h2>
+          <p class="muted">Fill this form — you’ll get an email copy + we’ll reach out to confirm.</p>
+
+          <!-- NETLIFY FORMS: IMPORTANT
+               - data-netlify="true"
+               - hidden form-name
+               - every field MUST have a name=""
+               - keep method="POST"
+               - action directs to thank-you page
+          -->
+          <form id="quoteForm" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+            <input type="hidden" name="form-name" value="quote" />
+            <p class="hidden">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <!-- One combined field so the submission email is never blank -->
+            <input type="hidden" name="summary" id="summaryField" value="" />
+
+            <div class="grid">
+              <label>
+                Bedrooms
+                <input type="number" name="bedrooms" min="0" placeholder="e.g., 3" required />
+              </label>
+
+              <label>
+                Bathrooms
+                <input type="number" name="bathrooms" min="0" step="0.5" placeholder="e.g., 2" required />
+              </label>
+
+              <label class="span-2">
+                Approx. square feet
+                <input type="number" name="square_feet" min="0" placeholder="e.g., 1800" required />
+              </label>
+
+              <label class="span-2">
+                Service type
+                <select name="service_type" required>
+                  <option value="" selected disabled>Select a service</option>
+                  <option value="standard">Standard cleaning</option>
+                  <option value="deep">Deep cleaning</option>
+                  <option value="move_in_out">Move‑in / Move‑out</option>
+                  <option value="post_construction">Post‑construction</option>
+                  <option value="airbnb_turnover">Airbnb / Turnover</option>
+                </select>
+              </label>
+
+              <label class="span-2">
+                Frequency
+                <select name="frequency" required>
+                  <option value="" selected disabled>Select frequency</option>
+                  <option value="one_time">One‑time</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="biweekly">Bi‑weekly</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+              </label>
+
+              <fieldset class="span-2">
+                <legend>Add‑ons (optional)</legend>
+                <div class="checks">
+                  <label class="check"><input type="checkbox" name="addons" value="inside_fridge" /> Inside fridge</label>
+                  <label class="check"><input type="checkbox" name="addons" value="inside_oven" /> Inside oven</label>
+                  <label class="check"><input type="checkbox" name="addons" value="windows" /> Interior windows</label>
+                  <label class="check"><input type="checkbox" name="addons" value="baseboards" /> Detailed baseboards</label>
+                  <label class="check"><input type="checkbox" name="addons" value="laundry" /> Laundry (wash & fold)</label>
+                </div>
+              </fieldset>
+
+              <label class="span-2">
+                Cleanliness level (1 = already clean, 10 = heavy duty)
+                <input type="range" name="cleanliness_level" min="1" max="10" value="5" oninput="document.getElementById('clVal').textContent=this.value" />
+                <span class="range-readout">Selected: <strong id="clVal">5</strong></span>
+              </label>
+
+              <label class="span-2">
+                Full name
+                <input type="text" name="full_name" placeholder="Your name" required />
+              </label>
+
+              <label>
+                Phone
+                <input type="tel" name="phone" placeholder="(###) ###‑####" required />
+              </label>
+
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+
+              <label class="span-2">
+                When do you need the cleaning?
+                <input type="text" name="preferred_date_time" placeholder="e.g., Friday morning, Feb 28 at 9am" required />
+              </label>
+
+              <label class="span-2">
+                City / Address (optional)
+                <input type="text" name="address" placeholder="City + street address if you want" />
+              </label>
+
+              <label class="span-2">
+                Notes (pets, priorities, access instructions)
+                <textarea name="notes" rows="4" placeholder="Pets? Key/garage code? Focus areas?"></textarea>
+              </label>
+            </div>
+
+            <button class="btn btn--full" type="submit">Send request</button>
+
+            <p class="fine">
+              By submitting you agree we can contact you by call/text/email to confirm details.
+            </p>
+          </form>
+
+          <div class="mini">
+            <div>
+              <div class="mini__title">Fast response</div>
+              <div class="mini__text">Usually within 5–30 minutes during business hours.</div>
+            </div>
+            <div>
+              <div class="mini__title">Payments</div>
+              <div class="mini__text">We can send an invoice for easy payment.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>What you get</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Premium detail</h3>
+            <p>We focus on high‑touch surfaces, kitchens, bathrooms, and finishing touches that make the home feel truly clean.</p>
+          </article>
+          <article class="card">
+            <h3>Clear communication</h3>
+            <p>We confirm scope, add‑ons, and timing before the visit — so there are no surprises.</p>
+          </article>
+          <article class="card">
+            <h3>Consistency</h3>
+            <p>Want recurring service? We keep notes about your preferences to deliver the same results each time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section section--dark">
+      <div class="container">
+        <div class="split">
+          <div>
+            <h2>Google Reviews</h2>
+            <p class="muted" id="gReviewsMeta">Loading reviews…</p>
+          </div>
+          <div class="actions">
+            <a class="btn btn--ghost" href="#quote">Get a quote</a>
+          </div>
+        </div>
+        <div class="reviews-grid" id="gReviews"></div>
+        <p class="fine muted">If you don't see reviews, set <b>GOOGLE_API_KEY</b> and <b>GOOGLE_PLACE_ID</b> in Netlify 2192 Site settings 2192 Environment variables.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="split">
+          <div>
+            <h2>Photos</h2>
+            <p class="muted" id="gPhotosMeta">Loading photos…</p>
+          </div>
+          <div class="actions">
+            <a class="btn btn--ghost" href="#quote">Request cleaning</a>
+          </div>
+        </div>
+        <div class="gallery-grid" id="gPhotos"></div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container split">
+        <div>
+          <h2>Need to reach us now?</h2>
+          <p class="muted">Call or text — we’ll help you in English, and we can also respond in Spanish via text.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="tel:+13475399538">Call (347) 539‑9538</a>
+          <a class="btn btn--ghost" href="sms:+13475399538">Text us</a>
+          <a class="btn btn--ghost" href="mailto:ghservicecleaning1@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="brand brand--small">
+          <span class="brand__mark" aria-hidden="true">✦</span>
+          <span class="brand__name">G&H SERVICE</span>
+        </div>
+        <p class="muted">Premium Cleaning • Phoenix, AZ</p>
+      </div>
+      <div class="footer__links">
+        <a href="#quote">Quote</a>
+        <a href="tel:+13475399538">Call</a>
+        <a href="mailto:ghservicecleaning1@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class="wa-float" id="waFloat" href="#" aria-label="Chat on WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="/assets/script.js"></script>
+</body>
+</html>

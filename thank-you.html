@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank you — G&H Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="/">
+        <span class="brand__mark" aria-hidden="true">✦</span>
+        <span class="brand__name">G&H SERVICE</span>
+        <span class="brand__tag">PREMIUM SERVICE</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow">
+      <h1>Request received ✅</h1>
+      <p class="muted">
+        Thanks! We got your quote request. We’ll contact you shortly to confirm details.
+      </p>
+      <div class="actions">
+        <a class="btn" href="tel:+13475399538">Call us</a>
+        <a class="btn" id="waThank" href="#">WhatsApp us</a>
+        <a class="btn btn--ghost" href="/">Back to home</a>
+      </div>
+
+      <hr class="hr" />
+
+      <p class="fine">
+        If you don’t hear from us soon, message us on WhatsApp and mention “quote form”.
+      </p>
+
+      <div class="card" style="margin-top:14px">
+        <div class="card__body">
+          <p class="muted" style="margin-top:0">What you submitted:</p>
+          <pre id="quoteSummary" style="white-space:pre-wrap;margin:0"></pre>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="muted">© <span id="y"></span> G&H Service LLC</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const WHATSAPP_NUMBER = '13475399538';
+    let summary = '';
+    try{ summary = localStorage.getItem('gh_quote_summary') || ''; }catch(e){}
+    const pre = document.getElementById('quoteSummary');
+    if(pre){ pre.textContent = summary || '(No details found — if needed, please message us.)'; }
+    const wa = document.getElementById('waThank');
+    if(wa){
+      const msg = encodeURIComponent('Hi! I just submitted a quote request.\n\n' + (summary || ''));
+      wa.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+      wa.target = '_blank';
+      wa.rel = 'noopener';
+    }
+  </script>
+</body>
+</html>
